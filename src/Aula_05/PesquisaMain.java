@@ -27,6 +27,7 @@ public class PesquisaMain {
 			System.out.println(" 2 - Buscar String: \n");
 			System.out.println(" 3 - Buscar String no inicio: \n ");
 			System.out.println(" 4 - Buscar String no fim: \n  ");
+			System.out.println(" 5 - Finalizar Operação \n  ");
 			
 			
 			
@@ -50,7 +51,16 @@ public class PesquisaMain {
 				
 	         case 2: 
 	        	 
-	        	 System.out.println("Buscar String funcao: >>");
+	        	 System.out.println("Fazer a busca da cadeia de caracteres: ");
+	        	 String buscaUsuario = dadosUsuario.next();
+	        	 
+	        	 System.out.println(buscaUsuario);
+	        	 
+	        	 if(buscaUsuario.indexOf(textoUsuario)) {
+	        		 
+	        	 }
+	        	
+	        	
 		
 	        	 break;
 			
@@ -71,8 +81,8 @@ public class PesquisaMain {
 	        	 break;
 	        	 
 	        	 
-	        	 default: 
-	        		 
+	         case 5: 
+	        	 System.out.println("Obrigado, finalizando sistema :D");
 	        		 return;
 			
 			
