@@ -56,7 +56,7 @@ public class PesquisaMain {
 	        	 
 	        	 System.out.println(buscaUsuario);
 	        	 
-	        	 if(buscaUsuario.indexOf(textoUsuario)) {
+	        	 if(buscaUsuario.indexOf(textoUsuario.indexOf(ch))) {
 	        		 
 	        	 }
 	        	
