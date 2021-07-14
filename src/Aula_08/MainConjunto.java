@@ -21,11 +21,14 @@ public class MainConjunto {
 		 
 		 int posicao = 0;
 		 
-		 Lista lista = new Lista();
+		 
 		 String caminho = "registro-log.txt";
 		 
 		 File arq = new File(caminho);
 		 
+		 
+		 
+		 Lista lista = new Lista();
 	     LocalDateTime ld = LocalDateTime.now();
 	     
 	     ld.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
@@ -35,27 +38,38 @@ public class MainConjunto {
 	                System.out.println("arquivo criado com sucesso");
 	            }
 	            
-	        } catch (IOException e){
+	        } catch (IOException e) {
 	        	
 	            System.out.println(e.getMessage());
 	            
 	        }
 	     
 	     
-	     RegistroLog registroLog = new RegistroLog();
+	      RegistroLog registroLog = new RegistroLog();
 	     
 	  
 		 
-		 boolean setMenu = true;
+		  boolean setMenu = true;
 	     
 	     
 
 			
 	     	while(setMenu) {
-	            System.out.println("1 - Inserir produto, 2) Inserir produto em posição específica, 3) Consultar produto (pelo nome), 4) Consultar produto (pela posição), 5) Substituir produto, 6) Remover produto (pelo nome),7) Remover produto (pela posição) 8- mostrar td 0- sair");
+	     		
+	            System.out.println(
+	            		
+	            		" 1 - Inserir produto, 2)"
+	            		+ " Inserir produto em posição específica, 3)"
+	            		+ " Consultar produto (pelo nome), 4)"
+	            		+ " Consultar produto (pela posição), 5)"
+	            		+ " Substituir produto, 6)"
+	            		+ " Remover produto (pelo nome),7)"
+	            		+ " Remover produto (pela posição)"
+	            		+ " 8- mostrar td 0- sair"
+	            		
+	            		);
 	     		
 	            int menu = dadosUsuario.nextInt();
-	            
 	            
 	            
 	            switch(menu) {
@@ -88,10 +102,10 @@ public class MainConjunto {
 	            	System.out.println("Consultar produto (pelo nome)");
 	            	produto = dadosUsuario.next();
 	            	if(lista.consultaNome(produto)) {
-	                    System.out.println("item disponível" + produto);
+	                    System.out.println(" item disponível " + produto);
 
 	            	} else {
-	                    System.out.println("item não disponíel");
+	                    System.out.println( produto + " não está disponíel");
 
 	            	}
 	            	
@@ -141,6 +155,8 @@ public class MainConjunto {
 	            	setMenu = false;
 	            	
 	           }
+	            
+	            dadosUsuario.close();
 	            
 
 	            
