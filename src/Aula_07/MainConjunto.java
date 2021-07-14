@@ -6,7 +6,12 @@ import java.util.Scanner;
 
 public class MainConjunto {
 	
-	
+	public static void main(String[] args) {
+		
+	}
+		
+
+
 	 Scanner dadosUsuario = new Scanner(System.in);
      int posicao=0;
      boolean setMenu = true;
@@ -79,6 +84,7 @@ public class MainConjunto {
          }
          
     }
+    
  }
 
 }
